@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ecf2f8;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.wrap {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  font-size: 13px;
+  font-family: 'Manrope';
+  font-weight: 500;
+  color: #6d7f97;
+  max-width: 730px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 5px -2px #6E8098;
+          box-shadow: 2px 2px 5px -2px #6E8098;
+}
+
+.card__img {
+  width: 39%;
+  -ms-flex-preferred-size: 285px;
+      flex-basis: 285px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+}
+
+.card__img img {
+  display: block;
+  height: 100%;
+}
+
+.card__content {
+  width: 61%;
+  padding: 30px 40px;
+  -ms-flex-preferred-size: 445px;
+      flex-basis: 445px;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #48556a;
+  margin-bottom: 16px;
+}
+
+.card__subtitle {
+  margin-bottom: 24px;
+  color: #6d7f97;
+}
+
+.card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card__user-avatar + .card__user-info {
+  margin-left: 16px;
+}
+
+.card__user-name {
+  font-weight: 700;
+  font-size: 13px;
+  color: #48556a;
+}
+
+.card__data-publication {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.card__share {
+  margin-left: auto;
+  position: relative;
+}
+
+.card__share.open .card__popup {
+  opacity: 1;
+  z-index: 1;
+}
+
+.card__share-btn {
+  background: #eaf1fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -webkit-transition: background .3s;
+  -o-transition: background .3s;
+  transition: background .3s;
+}
+
+.card__share-btn > svg {
+  fill: #6E8098;
+  -webkit-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s;
+}
+
+.card__share-btn:hover {
+  background-color: #6E8098;
+}
+
+.card__share-btn:hover > svg {
+  fill: #fff;
+}
+
+.card__popup {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  top: -85px;
+  padding: 17px 39px;
+  background-color: #48556a;
+  z-index: 1;
+  opacity: 0;
+  border-radius: 10px;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.card__popup::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 100%);
+      -ms-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  display: block;
+  border: 15px solid #48556a;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.card__popup-text {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 24px;
+  letter-spacing: 4px;
+}
+
+.card__popup-link {
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+
+.card__popup-link:first-of-type {
+  margin-left: 0;
+}
+
+.card__popup-link--fb {
+  background: url("../images/icon-facebook.svg") no-repeat center;
+}
+
+.card__popup-link--tw {
+  background: url("../images/icon-twitter.svg") no-repeat center;
+}
+
+.card__popup-link--pin {
+  background: url("../images/icon-pinterest.svg") no-repeat center;
+}
+
+@media (max-width: 880px) {
+  .wrap {
+    padding: 0;
+    margin: 15px;
+    height: auto;
+  }
+  .card {
+    max-width: 330px;
+    overflow: hidden;
+  }
+  .card__img {
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    border-radius: 0;
+  }
+  .card__content {
+    padding: 40px 30px 20px;
+  }
+  .card__title {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .card__footer {
+    position: relative;
+  }
+  .card__subtitle {
+    font-size: 11px;
+    margin-bottom: 35px;
+  }
+  .card__user-name {
+    font-size: 11px;
+  }
+  .card__data-publication {
+    font-size: 10px;
+  }
+  .card__share-btn {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .card__share.open {
+    position: absolute;
+    top: -15px;
+    left: -30px;
+    right: -30px;
+    background: #48556a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 19px 30px 35px;
+  }
+  .card__share.open .card__popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  .card__share.open .card__share-btn {
+    margin-left: auto;
+  }
+  .card__popup {
+    display: none;
+    opacity: 1;
+    position: static;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .card__popup::after {
+    display: none;
+  }
+}
